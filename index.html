@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Рулетка Фортуны</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1>🎡 Рулетка Фортуны</h1>
+        <p id="status" class="status">Нажмите «Крутить», чтобы испытать удачу!</p>
+
+        <div class="wheel-container">
+            <div class="wheel" id="wheel">
+                <!-- Сектора будут добавлены через JS -->
+            </div>
+            <div class="pointer">▼</div>
+        </div>
+
+        <button id="spinBtn" class="spin-btn">Крутить!</button>
+    </div>
+
+    <!-- Подключаем официальный скрипт Telegram -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
