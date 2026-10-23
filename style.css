@@ -1,0 +1,69 @@
+:root {
+    --bg: var(--tg-theme-bg-color, #ffffff);
+    --text: var(--tg-theme-text-color, #000000);
+    --hint: var(--tg-theme-hint-color, #999999);
+    --button: var(--tg-theme-button-color, #3390ec);
+    --button-text: var(--tg-theme-button-text-color, #ffffff);
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.app { text-align: center; max-width: 400px; width: 100%; }
+h1 { font-size: 24px; margin-bottom: 8px; }
+.status { color: var(--hint); font-size: 14px; margin-bottom: 24px; min-height: 20px; }
+
+.wheel-container {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 30px;
+}
+
+.wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid var(--button);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+    position: relative;
+    overflow: hidden;
+}
+
+.pointer {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: var(--button);
+    z-index: 10;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.spin-btn {
+    background: var(--button);
+    color: var(--button-text);
+    border: none;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    width: 100%;
+    max-width: 280px;
+}
+
+.spin-btn:active { transform: scale(0.97); }
+.spin-btn:disabled { opacity: 0.5; cursor: not-allowed; }
